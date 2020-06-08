@@ -15,7 +15,7 @@ on:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: .NET Core CLI
+  IMAGE_NAME: Dockerfile
   uses: baruchiro/github-actions@0.0.1  
 
 jobs:

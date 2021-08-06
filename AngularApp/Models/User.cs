@@ -11,16 +11,14 @@ namespace AngularApp.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public ObjectId Id { get; set; }
+        public string Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
         public string LastName {  get; set; }
         public string Email { get; set; }
-        [BsonDateTimeOptions]
-        public DateTime Created { get; set; } = default(DateTime);
-        [BsonDateTimeOptions]
-        public DateTime LastModified { get; set; } = DateTime.UtcNow;
+        public string Created { get; set; }
+        public string LastModified { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string Country { get; set; }

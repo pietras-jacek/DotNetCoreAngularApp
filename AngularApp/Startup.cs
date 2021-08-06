@@ -1,4 +1,5 @@
 using AngularApp.Models;
+using AngularApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,7 @@ namespace AngularApp
             });
             services.AddSingleton<IUserDatabaseSettings>(provider =>
             provider.GetRequiredService<IOptions<UserDatabaseSettings>>().Value);
+            services.AddScoped<UserService>();
             services.AddControllers();
         }
 
